@@ -1,6 +1,12 @@
 import os
 
 projetos = ['jogos', 'python', 'analise de dados', None, 'aplicativo movel']
+dados = {'nome': 'Pedro', 
+         'idade': 30, 
+         'cidade': 'Porto Alegre'
+}
+
+
 
 
 
@@ -16,7 +22,11 @@ def lista_exercicios():
     print('8 Tabuada')
     print('9. Soma com valores invalidos')
     print('10. Calcular Média')
-    print('11. Sair')
+    print('11. Manipulação de Dicionário')
+    print('12. Dicionario Quadrado')
+    print('13. Verificar Dicionario')
+    print('14. Numero da frequencia de palavras no Dicionario')
+    print('15. Sair')
     print('########################')
 
 def escolher_opcao():
@@ -43,6 +53,14 @@ def escolher_opcao():
         case 10:
             calcular_media()
         case 11:
+            manipulando_dicionario()
+        case 12:
+            dicionario_quadrado()
+        case 13:
+            dicionario_verificar()
+        case 14:
+            dicionario_frequencia()
+        case 15:
             finalizar_app()
         case _:
             print('Opcao invalida.')
@@ -172,6 +190,45 @@ def calcular_media():
     except ZeroDivisionError:
         print('Não é possivel calcular uma média com uma lista vazia')
 
+def manipulando_dicionario():
+    print('Mudando a idade')
+    print(dados)
+    dados['idade'] = 31
+    print(dados)
+    print('Adicionando Profissao')
+    dados['profissao'] = 'Desenvolvedor'
+    print(dados)
+    del dados['cidade']
+    print(dados)
+
+def dicionario_quadrado():
+    quadrado = {}
+    for i in range(1,6):
+        quadrado[i] = i ** 2
+    print(quadrado)
+
+def dicionario_verificar():
+    pessoa = {'nome': 'Pedro',
+              'idade': 30,
+              'cidade': 'Porto Alegre'
+    }
+    if 'email' in pessoa:
+        print("A chave 'email' existe no dicionario")
+    else:
+        print("A chave 'email' nao existe no dicionario")
+        
+def dicionario_frequencia():
+    frase = 'O rato roeu a roupa do rei de roma e a rainha de raiva roeu o resto da roupa do rei'
+    palavras = frase.split()
+    frequencia = {}
+
+    for palavra in palavras:
+        if palavra in frequencia:
+            frequencia[palavra] += 1
+        else:
+            frequencia[palavra] = 1
+    
+    print(frequencia)
 def main():
     lista_exercicios()
     escolher_opcao()
