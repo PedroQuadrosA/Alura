@@ -229,6 +229,7 @@ def dicionario_frequencia():
             frequencia[palavra] = 1
     
     print(frequencia)
+
 def main():
     lista_exercicios()
     escolher_opcao()
