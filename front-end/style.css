@@ -1,0 +1,22 @@
+body {
+    background-color: #02182B;
+    color: #E0E0E0;
+}
+
+h1 {
+    color: #E0E0E0;
+    font-weight: bold;
+}
+
+a {
+    color: #E0E0E0;
+    font-weight: bold;
+}
+
+strong {
+    color: #22d4fd;
+}
+
+span {
+    color: #22d4fd;
+}
