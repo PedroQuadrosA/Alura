@@ -1,11 +1,15 @@
-body {
-    background-color: #02182B;
-    color: #E0E0E0;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed&display=swap');
+
+*{
+    margin: 0;    
+    padding: 0;
 }
 
-h1 {
+body {
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: #02182B;
     color: #E0E0E0;
-    font-weight: bold;
 }
 
 a {
@@ -13,10 +17,42 @@ a {
     font-weight: bold;
 }
 
-strong {
+.destaque_titulo {
     color: #22d4fd;
 }
 
-span {
+.destaque_texto {
     color: #22d4fd;
+}
+
+.apresentacao{
+    margin:10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lista_redes {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.rodape {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.apresentacao__conteudo {
+    width: 615px;
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 36px;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.apresentacao__conteudo__texto {
+    font-size: 24px;
+    font-family: "Montserrat", sans-serif;
 }
